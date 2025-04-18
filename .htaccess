@@ -1,0 +1,18 @@
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+Options -Indexes
+
+<IfModule mod_php7.c>
+    php_value session.cookie_httponly 1
+    php_value session.cookie_secure 1
+    php_value session.use_only_cookies 1
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]

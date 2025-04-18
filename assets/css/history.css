@@ -1,0 +1,134 @@
+.history-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #18192e;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding: 32px;
+}
+
+.history-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #23244a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.history-table th,
+.history-table td {
+    padding: 14px 10px;
+    text-align: left;
+}
+
+.history-table th {
+    background: #1a1b36;
+    color: #fff;
+    font-weight: 600;
+}
+
+.history-table tr {
+    border-bottom: 1px solid #23244a;
+}
+
+.history-table tr:last-child {
+    border-bottom: none;
+}
+
+.history-table td {
+    color: #e0e0e0;
+    vertical-align: middle;
+}
+
+.product-thumb {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #222;
+    background: #fff;
+}
+
+.download-btn {
+    background: #1a8917;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #166d13;
+}
+
+.no-history {
+    text-align: center;
+    color: #888;
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.navbar-container {
+    position: relative;
+    padding: 0 20px;
+}
+
+.navbar-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-menu-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #18192e;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .history-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
